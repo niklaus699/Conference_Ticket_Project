@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'inconsolata';
+    /* Give your font a name */
+    src: url('./assets/fonts/static/Inconsolata-Bold.ttf') format('truetype');
+    /* Path to the .ttf file */
+    font-weight: normal;
+    /* Optional: Specify weight */
+    font-style: normal;
+    /* Optional: Specify style */
+}
+
+@font-face {
+    font-family: 'inconsolata_bold';
+    /* Give your font a name */
+    src: url('./assets/fonts/static/Inconsolata-ExtraBold.ttf') format('truetype');
+    /* Path to the .ttf file */
+    font-weight: normal;
+    /* Optional: Specify weight */
+    font-style: normal;
+    /* Optional: Specify style */
+}
+
+@font-face {
+    font-family: 'inconsolata_regular';
+    /* Give your font a name */
+    src: url('./assets/fonts/static/Inconsolata-Regular.ttf') format('truetype');
+    /* Path to the .ttf file */
+    font-weight: normal;
+    /* Optional: Specify weight */
+    font-style: normal;
+    /* Optional: Specify style */
+}
+
+@font-face {
+    font-family: 'inconsolata_medium';
+    /* Give your font a name */
+    src: url('./assets/fonts/static/Inconsolata-Medium.ttf') format('truetype');
+    /* Path to the .ttf file */
+    font-weight: normal;
+    /* Optional: Specify weight */
+    font-style: normal;
+    /* Optional: Specify style */
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/images/background-desktop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    /* Sticks to the bottom-left corner */
+    bottom: -200px;
+    left: 0px;
+    width: 400px;
+    /* Adjust width as needed */
+    height: 450px;
+    background: url('./assets/images/pattern-squiggly-line-bottom.svg') no-repeat;
+    background-size: contain;
+    /* Ensure the image scales properly */
+    z-index: -1;
+    /* Keep it behind other elements */
+}
+
+h6 {
+    color: white;
+    font-size: 14px;
+    font-family: 'inconsolata_regular', Afacad;
+}
+
+.logo-img {
+    height: 20px;
+}
+
+.top-logo {
+    display: flex;
+    font-family: 'inconsolata', Afacad;
+    font-weight: 700;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-text {
+    justify-self: center;
+    font-family: 'inconsolata_bold', Afacad;
+    color: white;
+}
+
+.head-info {
+    justify-self: center;
+    font-family: 'inconsolata_regular', Open Sans;
+    color: white;
+}
+
+.form1 {
+    justify-self: center;
+    align-content: center;
+}
+
+#drop-zone {
+    display: grid;
+    border: 2px dashed lightblue;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'inconsolata_regular', Open Sans;
+    color: #666;
+    cursor: pointer;
+    width: 300px;
+    height: 100px;
+    /* margin: 50px auto; */
+}
+
+#drop-zone.drag-over {
+    border-color: #6c63ff;
+    background-color: #f4f4f4;
+}
+
+.drop-icon-container {
+    background-color: #666;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    justify-self: center;
+}
+
+.upload-info {
+    color: white;
+    font-family: 'inconsolata_regular', Open Sans;
+    font-size: small;
+    justify-self: center;
+    /* align-content: center; */
+}
+
+.upload-info img {
+    vertical-align: middle;
+}
+
+.inputbox {
+    display: grid;
+    justify-self: center;
+}
+
+.name-box {
+    background-color: inherit;
+    border-radius: 15px;
+    width: 300px;
+    height: 50px;
+}
+
+.generate-button {
+    display: flex;
+    background-color: palevioletred;
+    border-radius: 10px;
+    width: 300px;
+    height: 40px;
+    justify-content: center;
+}
+
+.generate-button span {
+    align-self: center;
+}
+
+.cunt {
+    display: grid;
+    row-gap: 30px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Conference ticket generator</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+
+    <!-- Form starts -->
+    <div class="top-logo"><img class="logo-img" src="./assets/images/logo-mark.svg" alt="logo">
+        <h2>Coding Conf</h2>
+    </div>
+
+    <h1 class="head-text">Your Journey to Coding Conf <br> 2025 Starts Here!</h1>
+    <p class="head-info">Secure your spot at next year's biggest coding conference.</p>
+    <div class="form1">
+        <h6>Upload Avatar</h6>
+        <div id="drop-zone">
+            <div class="drop-icon-container"><img class="drop-icon" src="./assets/images/icon-upload.svg" alt=""></div> Drag and drop or click to upload</div>
+    </div> <input type="file" id="file-input" accept="image/*" style="display: none;">
+    <p class="upload-info"> <img src="./assets/images/icon-info.svg" alt=""> Upload your photo (JPG or PNG, max size: 500KB).</p>
+    <div class="inputbox">
+        <h6>Full Name</h6>
+        <input class="name-box" type="text" id="fullName">
+        <div>
+            <h6>Email Address</h6> <input id="email" type="email" class="name-box" placeholder="example@email.com"></div>
+        <div class="namebox-container">
+            <h6>GitHub Username</h6>
+            <div class="cunt">
+                <input id="github" type="text" class="name-box" placeholder="@yourusername">
+                <button type="submit" class="generate-button" onclick="location.href=''"> <span>Generate My Ticket</span></button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Form ends -->
+
+    <!-- Generated tickets starts -->
+
+    Congrats,
+    <!-- Full Name -->! Your ticket is ready. We've emailed your ticket to
+    <!-- Email Address -->and will send updates in the run up to the event. Coding Conf Jan 31, 2025 / Austin, TX
+
+    <!-- Generated tickets ends -->
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="index.js"></script>
+    <script src="validation.js"></script>
+</body>
+
+</html>
