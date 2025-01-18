@@ -38,33 +38,18 @@
     </div> <input type="file" id="file-input" accept="image/*" style="display: none;">
     <p class="upload-info"> <img src="./assets/images/icon-info.svg" alt=""> Upload your photo (JPG or PNG, max size: 500KB).</p>
     <div class="inputbox">
-        <h6>Full Name</h6>
-        <input class="name-box" type="text" id="fullName">
-        <div>
-            <h6>Email Address</h6> <input id="email" type="email" class="name-box" placeholder="example@email.com"></div>
-        <div class="namebox-container">
+        <form id="myForm">
+            <h6> Full Name</h6>
+            <input type="text" id="fullName">
+            <h6>Email Address</h6>
+            <input type="email" id="email" placeholder="example@gmail.com">
             <h6>GitHub Username</h6>
-            <div class="cunt">
-                <input id="github" type="text" class="name-box" placeholder="@yourusername">
-                <button type="submit" class="generate-button" onclick="location.href=''"> <span>Generate My Ticket</span></button>
-            </div>
-        </div>
+            <input type="text" id="github" placeholder="@yourusername">
+            <button class="generate-button" type="submit" onclick="location.href='./ticket.html'"> <span>Generate My Ticket</span></button>
+        </form>
+    </div>
     </div>
 
-
-    <!-- Form ends -->
-
-    <!-- Generated tickets starts -->
-
-    Congrats,
-    <!-- Full Name -->! Your ticket is ready. We've emailed your ticket to
-    <!-- Email Address -->and will send updates in the run up to the event. Coding Conf Jan 31, 2025 / Austin, TX
-
-    <!-- Generated tickets ends -->
-
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
-    </div>
     <script src="index.js"></script>
     <script src="validation.js"></script>
 </body>

@@ -165,13 +165,19 @@ h6 {
 .inputbox {
     display: grid;
     justify-self: center;
+    color: antiquewhite;
 }
 
-.name-box {
+input {
     background-color: inherit;
-    border-radius: 15px;
+    color: white;
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
     width: 300px;
-    height: 50px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 .generate-button {
@@ -187,7 +193,33 @@ h6 {
     align-self: center;
 }
 
-.cunt {
-    display: grid;
-    row-gap: 30px;
+input.invalid {
+    border-color: red;
 }
+
+
+/* Green border for valid input */
+
+input.valid {
+    border-color: green;
+}
+
+.success-message {
+    font-family: 'inconsolata_bold', Afacad;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.highlight {
+    color: palevioletred;
+    font-weight: bold;
+}
+
+.ticketImage {
+    justify-self: center;
+}
+
+
+/* .ticketImage.invalid {
+    display: none;
+} */

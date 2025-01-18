@@ -15,6 +15,40 @@
             <h2>Coding Conf</h2>
         </div>
     </header>
+    <div id="successMessage" class="success-message">
+        <!-- Content will be populated by JavaScript -->
+    </div>
+    <div class="ticketContainer"><img id="ticket" src="./assets/images/pattern-ticket.svg" style="display: none;" alt=""></div>
+
+    <script>
+        // Retrieve the full name from localStorage
+        const userFullName = localStorage.getItem("userFullName");
+        const userEmail = localStorage.getItem("userEmail");
+
+        if (userFullName || userEmail) {
+            // Display the success message
+            const nameMessage = '<h1 class="head-text">Congrats <span class="highlight">' + userFullName + '!</span> <br> Your ticket is ready.</h1>';
+            const emailMessage = '<p class="head-info">We\'ve emailed your ticket to <br> <span class="highlight">' + userEmail + '</span> and will send updates in<br> the run up to the event</p>';
+            document.getElementById("successMessage").innerHTML = nameMessage + emailMessage;
+
+            // Remove the full name from localStorage
+            localStorage.removeItem("userFullName");
+            localStorage.removeItem("userEmail");
+            showTicket()
+        } else {
+            // <!-- noShow() -->
+            document.getElementById("successMessage").innerHTML = `
+            <span class="highlight">No user data found.</span> 
+            Please return to the form and submit your details.
+        `;
+        }
+
+        function showTicket() {
+            document.getElementById("ticket").style.display = "block";
+            document.getElementById("ticket").style.justifySelf = "center";
+        }
+    </script>
+    <script src="./validation.js"></script>
 </body>
 
 </html>
