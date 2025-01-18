@@ -18,22 +18,42 @@
     <div id="successMessage" class="success-message">
         <!-- Content will be populated by JavaScript -->
     </div>
-    <div class="ticketContainer"><img id="ticket" src="./assets/images/pattern-ticket.svg" style="display: none;" alt=""></div>
+    <div class="ticketContainer" id="ticketContainer">
+        <!-- Content will be populated by JavaScript -->
+    </div>
+
+
 
     <script>
         // Retrieve the full name from localStorage
         const userFullName = localStorage.getItem("userFullName");
         const userEmail = localStorage.getItem("userEmail");
+        const githubUsername = localStorage.getItem("githubUsername");
+        const uploadedImage = localStorage.getItem("uploadedImage");
 
         if (userFullName || userEmail) {
             // Display the success message
+            const ticketBody = '<img id="ticket" src="./assets/images/pattern-ticket.svg" style="display: none;" alt="">\
+            <img class="overlayImage1" src="./assets/images/logo-full.svg" alt="">\
+            <p class="overlayParagraph">Jan 31, 2025 / Austin , TX></p> <img id="uploadedImage" alt="User Uploaded Image" class="overlay-image">\
+            <div class="user-details">\
+                <h3 class="user-fullname">' + userFullName + ' </h3>\
+                <div class="github-container">\
+                    <img class="github-image" src="./assets/images/icon-github.svg" alt="">\
+                    <p class="user-github">' + githubUsername + '</p>\
+             </div>\
+         </div>'
             const nameMessage = '<h1 class="head-text">Congrats <span class="highlight">' + userFullName + '!</span> <br> Your ticket is ready.</h1>';
             const emailMessage = '<p class="head-info">We\'ve emailed your ticket to <br> <span class="highlight">' + userEmail + '</span> and will send updates in<br> the run up to the event</p>';
             document.getElementById("successMessage").innerHTML = nameMessage + emailMessage;
+            document.getElementById("ticketContainer").innerHTML = ticketBody;
+            showUserImage()
 
             // Remove the full name from localStorage
             localStorage.removeItem("userFullName");
             localStorage.removeItem("userEmail");
+            localStorage.removeItem("uploadedImage");
+            localStorage.removeItem("githubUsername");
             showTicket()
         } else {
             // <!-- noShow() -->
@@ -47,8 +67,18 @@
             document.getElementById("ticket").style.display = "block";
             document.getElementById("ticket").style.justifySelf = "center";
         }
+
+        function showUserImage() {
+            if (uploadedImage) {
+                const imgElement = document.getElementById("uploadedImage");
+                imgElement.src = uploadedImage; // Set the source to the Base64 string
+            } else {
+                alert("No uploaded image found.");
+            }
+        }
     </script>
     <script src="./validation.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
