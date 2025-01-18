@@ -272,3 +272,32 @@ input.valid {
     position: absolute;
     bottom: -43px;
 }
+
+@media only screen and (max-width: 500px) {
+    .head-text {
+        font-size: 25px;
+    }
+    .head-info {
+        font-size: 15px;
+        padding-left: 18px;
+    }
+    .ticketContainer {
+        height: 30px;
+        width: 30px;
+    }
+    .user-details {
+        bottom: -60px;
+    }
+    .user-fullname {
+        font-size: 12px;
+    }
+    .overlayImage1 {
+        left: -160px;
+    }
+    .overlay-image {
+        bottom: -60px;
+        left: -100px;
+        height: 50px;
+        width: 50px;
+    }
+}
